@@ -42,6 +42,7 @@ class ItemTags extends StatefulWidget {
       this.singleItem = false,
       this.textOverflow = TextOverflow.fade,
       this.textColor = Colors.black,
+      this.iconColor = Colors.black,
       this.textActiveColor = Colors.white,
       this.color = Colors.white,
       this.activeColor = Colors.blueGrey,
@@ -109,6 +110,9 @@ class ItemTags extends StatefulWidget {
 
   /// text color of the [ItemTags]
   final Color textColor;
+  
+  /// icon color of the [ItemTags]
+  final Color iconColor;
 
   /// color of the [ItemTags] text activated
   final Color textActiveColor;
@@ -290,7 +294,7 @@ class _ItemTagsState extends State<ItemTags> {
                         : EdgeInsets.only(left: 5)),
             child: Icon(
               widget.icon!.icon,
-              color: _textStyle.color,
+              color: widget.iconColor,
               size: _textStyle.fontSize! * 1.2,
             ),
           )
